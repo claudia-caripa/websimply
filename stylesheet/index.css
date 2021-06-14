@@ -1,0 +1,237 @@
+/* NAVIGATION */
+/* (A) ON BIG SCREEN */
+/* (A1) HORIZONTAL MENU */
+#hamItems { display: flex; }
+#hamItems a { width: 100%; }
+/* (A2) HIDE HAMBURGER ICON */
+#hamNav label, #hamburger, #hamlogo { display: none; }
+
+
+/*Add margin-right to the logo*/
+#logo{
+  margin-right: 200px;
+}
+
+
+/* (B) ON SMALL SCREEN */
+@media only screen and (max-width: 823px) {
+  /* (B1) SHOW HAMBURGER ICON */
+  #hamNav label { display: inline-block; 
+    margin-top: -10px; margin-bottom: -10px;
+  }
+  #hamlogo {display:inline-block;
+           height:30px; margin-left: 65%;
+          }
+
+  
+  #logo{display: none;}
+
+  /* (B2) BREAK ITEMS INTO SINGLE COLUMN */
+  #hamItems { flex-wrap: wrap; }
+  /* (B3) TOGGLE SHOW/HIDE */
+  #hamItems{ display: none; }
+  #hamNav input:checked ~ #hamItems { display: flex; }
+}
+
+/* COSMETICS */
+
+#hamNav label { font-size: 2em; }
+#hamNav {
+  padding : 10px;
+  background: white;
+    box-shadow: 0 2px 4px 0 #9DC183;
+}
+#hamNav, #hamItems a {
+  color: #3F704D;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
+#hamItems a { padding: 10px; 
+font-size: 1.5em;}
+
+
+#hamItems a:hover { background-color: #3F704D;
+color: white;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-radius: 10px 10px 0px 0px;
+border-radius: 10px 10px 0px 0px;
+}
+
+/* Prevent the logo from changing the background color */
+#hamItems #logoLink:hover{
+  background-color: white;
+}
+
+#footerLogo{
+    height: 50px;
+}
+
+
+
+/* Main Section*/
+
+.mainsection {
+    padding:5%;
+    padding-top: 2%;
+}
+
+/* Font */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2{
+  color: #3f704d;
+}
+
+
+/* BUTTONS*/
+
+button{
+  background:#3f704d;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#9dc183;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #3f704d;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+@media (max-width: 823px){
+button {
+  height:30px;
+  font-size:1.3em;
+
+}}
+/* FOOTER */
+
+.hr-footer{
+width: 100%;
+color:#9DC183;
+height:0px;
+border: none;
+border-top: solid 2px;
+}
+footer
+ {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-distributed {
+  background-color: white;
+  color: #3F704D;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px;
+  padding: 20px 45px 50px 20px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3F704D;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #3F704D;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #3F704D;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.2); -webkit-transform:scale(1.2);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 823px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
