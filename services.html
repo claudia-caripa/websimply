@@ -140,7 +140,7 @@
                 <td><b>$30</b> per month</td>
               </tr>
               <tr>
-                <td><button>Sign Up</button></td>
+                <td><button onclick="openSignUp()">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -169,7 +169,7 @@
                 <td><b>$35</b> per month</td>
               </tr>
               <tr>
-                <td><button>Sign Up</button></td>
+                <td><button onclick="openSignUp()">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -201,7 +201,7 @@
                 <td><b>$35</b> per month</td>
               </tr>
               <tr>
-                <td><button>Sign Up</button></td>
+                <td><button onclick="openSignUp()">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -216,15 +216,45 @@
           <h3>Chat with us</h3>
           <label for="msg"><b>Message</b></label>
           <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Type message..." required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" onclick="sendMsg()">Send</button>
           <button type="button" onclick="closeChat()">Close</button>
         </form>
       </div>
 
+    </section>
 
+    <!--Signup form-->
+    <section id="signup-form" class="modal">
+      <!--Close button-->
+      <span onclick="document.getElementById('signup-form').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-    
+      <form action="" method="post" class="modal-content">
+        <div class="modal-container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
 
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+          <!--buttons-->
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('signup-form').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
     </section>
 
 
@@ -262,8 +292,22 @@
       }
 
       function closeChat(){
+        document.getElementById("msg").value="";
         document.getElementById("chatForm").style.display="none";
       }
+
+      function sendMsg(){
+        if(document.getElementById("msg").value != ""){
+          alert('Thanks for your message, will contact you soon'); 
+        closeChat();
+        }
+      }
+
+      function openSignUp(){
+        document.getElementById('signup-form').style.display='block'
+      }
+
+
     </script>
 
   </body>
