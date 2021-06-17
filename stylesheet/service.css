@@ -14,25 +14,8 @@ body, html{
   box-sizing: border-box;
 }
 
-header {
-  position: relative;
-  height: 200px;
-  background: #9DC183;
-  background-image: linear-gradient(155deg, #9DC183 50%, #3f704d 100%);
-}
-
-header p {
-  color: #3f704d;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-header h1{
-    font-family: 'Viaoda Libre', cursive;
-    color: white;
-    font-size: 3rem;
-    padding-top: 10px;
-    text-align: center;
+.title{
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -57,6 +40,9 @@ header h1{
 
 
 /*Products Section*/
+.products-container{
+  text-align: center;
+}
 .products-container i{
   color: white;
   background-color: #3f704d;
