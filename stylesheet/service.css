@@ -35,6 +35,7 @@ header h1{
     text-align: center;
 }
 
+
 /*Flexbox containers*/
 .title{
   text-align: center;
@@ -54,6 +55,7 @@ header h1{
   margin: 20px;
 }
 
+
 /*Products Section*/
 .products-container i{
   color: white;
@@ -68,11 +70,15 @@ header h1{
   width: 120px;
 }
 
+
+
 /*Flip Products Cards*/
+
 .flip-card-inner {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  height: 100px;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -96,6 +102,8 @@ header h1{
 
 .price-container{
   text-align: center;
+  margin-top: 150px;
+  border-top: 1px #9DC183 solid;
 }
 
 table, td {
@@ -112,10 +120,53 @@ td{
   padding: 16px;
 }
 
+/*Popup chat*/
+.open-chat{
+  position: fixed;
+  bottom: 150px;
+  right: 10px;
+  width: 10px;
+  border-radius: 90%;
+  background-color: transparent;
+}
+
+.chat-popup{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 2px solid #3f704d;
+  z-index: 9;
+}
+
+.chat-container{
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.chat-container textarea{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.chat-popup button{
+  width: 100px;
+  height: 30px;
+  font-size: smaller;
+}
 
 /*Media Queries*/
 @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
+  }
+
+  #chat-icon{
+    font-size: 1.5rem;
   }
 }

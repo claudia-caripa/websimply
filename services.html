@@ -52,7 +52,8 @@
                 <p>Static Website</p>
               </div>
               <div class="flip-card-back">
-                <p>Excellent choice for businesses who are looking to make a start towards their online journey.</p>
+                <h4>Static Website</h4>
+                <p>Excellent choice to start your online journey.</p>
               </div>
             </div>
           </div>
@@ -64,6 +65,7 @@
                 <p>Dynamic Website</p>
               </div>
               <div class="flip-card-back">
+                <h4>Dynamic Website</h4>
                 <p>More complex option. It's a Database-driven site</p>
               </div>
             </div>
@@ -76,22 +78,24 @@
                 <p>eCommerce Web Design</p>
               </div>
               <div class="flip-card-back">
+                <h4>eCommerce Web Design</h4>
                 <p>Custom-built, user-friendly website for selling online</p>
               </div>
             </div>
           </div>
 
-          <div class="flex-item flip-card">
+          <!--<div class="flex-item flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <i class="fa fa-mobile fa-5x mobile"></i>
                 <p>Responsive Website Design</p>
               </div>
               <div class="flip-card-back">
-                <p>It adapts to the device to deliver a user-friendly experience across all devices</p>
+                <h4>Responsive Website Design</h4>
+                <p>It adapts across all devices</p>
               </div>
             </div>
-          </div>
+          </div>-->
 
           <div class="flex-item flip-card">
             <div class="flip-card-inner">
@@ -100,6 +104,7 @@
                 <p>Graphic Design</p>
               </div>
               <div class="flip-card-back">
+                <h4>Graphic Design</h4>
                 <p>Bring your brand to life with our graphic design services.</p>
               </div>
             </div>
@@ -107,7 +112,8 @@
         </div>
       </div>
 
-      <!--Price Section-->
+      
+      <!--Pricing Section-->
       <div class="price-container">
         <p class="title">PRICING</p>
         <p>Choose a princing plan that fits your needs.</p>
@@ -202,6 +208,19 @@
         </div>
       </div>
 
+      <!--Popup chat button-->
+      <button class="open-chat" onclick="openChat()"><i id="chat-icon" class="fa fa-comments fa-2x" style="color: #3f704d;" aria-hidden="true"></i></button>
+      <!--Popup Chat form-->
+      <div class="chat-popup" id="chatForm">
+        <form action="" method="post" class="chat-container">
+          <h3>Chat with us</h3>
+          <label for="msg"><b>Message</b></label>
+          <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Type message..." required></textarea>
+          <button type="submit">Send</button>
+          <button type="button" onclick="closeChat()">Close</button>
+        </form>
+      </div>
+
 
 
     
@@ -236,6 +255,16 @@
       </div>
 
     </footer>
+
+    <script>
+      function openChat(){
+        document.getElementById("chatForm").style.display="block";
+      }
+
+      function closeChat(){
+        document.getElementById("chatForm").style.display="none";
+      }
+    </script>
 
   </body>
 </html>
