@@ -6,6 +6,102 @@
     <link rel="stylesheet" href="stylesheet/index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>WEBSIMPLY</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+
+      aside{
+        text-align: center;
+      }
+
+      #div1 {
+        /*width: 50px;*/
+        height: 90px;
+      }
+
+      /*Style for the logo*/
+      #div1 img{
+        height: 20%;
+        margin: 5px;
+      }
+
+      #maps{
+        width: 250px;
+        
+      }
+
+       /*Style for social media icons*/
+      #div1 i{
+        color: #9dc183;
+        padding: 10px;
+      }
+      
+      /* Style inputs */
+      input[type=text], input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #3f704d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #9dc183;
+      }
+      
+      /*input[type=email]{
+          background-color: white;
+          width: 50%;
+          border: none;
+          padding: 1px;
+         padding: 5em
+      }*/
+      
+      
+      /* Style the container/contact section */
+      .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px; 
+      }
+      
+      /* Create two columns that float next to eachother */
+      .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      </style>
   </head>
   <body>
     <nav id="hamNav">
@@ -30,16 +126,55 @@
 
     <!-- Your design starts here-->
     <section class="mainsection">
+      <div class="container">
+        <div style="text-align:center">
+          <h1>Contact Us</h1>
+          <p>We would love to hear from you, please feel free to contact us</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <aside>
+              <h2>Follow Us</h2>
+              <div id="div1">
+              
+                <img src="images/logo.png" alt="Logo">
+                <br>
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                <a href="#"><i class="fa fa-github fa-2x"></i></a>
 
-
-
-
-
-
-
-
-
-
+              </div>
+              <div>
+                <h2>Call us</h2>
+                <p style: background-color: #3f704d;>+0863351579</p>
+                <br>
+                
+                <h2>Find us</h2>
+                <div style="width: 100%">
+                  <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Aviva%20stadium+(WEBSIMPLY)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+              </div>
+            </aside>
+          </div>
+         
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email.." required></input>
+             <br>
+             <br>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      
     </section>
 
 

@@ -91,6 +91,7 @@ body, html{
   bottom: 130px;
 }
 
+
 /*Pricing section*/
 
 .price-container{
@@ -156,7 +157,7 @@ td{
 
 /*SignUp Section*/
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], select {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -166,7 +167,7 @@ input[type=text], input[type=password] {
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, select:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -222,12 +223,20 @@ hr {
 
 
 /*Media Queries*/
-@media (max-width: 800px) {
+
+
+@media (max-width: 1020px) {
   .flex-container {
     flex-direction: column;
   }
 
+  .flip-card-back {
+    position: relative;
+    top: -140px;
+    transform: rotateY(180deg);
+  }
+
   #chat-icon{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }

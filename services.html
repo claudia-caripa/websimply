@@ -146,7 +146,7 @@
                 <td><b>$30</b> per month</td>
               </tr>
               <tr>
-                <td><button onclick="openSignUp()">Sign Up</button></td>
+                <td><button onclick="openSignUp('standar')">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -175,7 +175,7 @@
                 <td><b>$35</b> per month</td>
               </tr>
               <tr>
-                <td><button onclick="openSignUp()">Sign Up</button></td>
+                <td><button onclick="openSignUp('pro')">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -204,10 +204,10 @@
                 <td><b>Accept</b> payments</td>
               </tr>
               <tr>
-                <td><b>$35</b> per month</td>
+                <td><b>$50</b> per month</td>
               </tr>
               <tr>
-                <td><button onclick="openSignUp()">Sign Up</button></td>
+                <td><button onclick="openSignUp('premium')">Sign Up</button></td>
               </tr>
             </table>
           </div>
@@ -247,6 +247,15 @@
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label for="plan"><b>Plan</b></label>
+          <select name="plan" id="plan">
+            <option value="standar">STANDAR</option>
+            <option value="pro">PRO</option>
+            <option value="premium">PREMIUM</option>
+          </select>
+
+          <br>
           
           <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -309,8 +318,11 @@
         }
       }
 
-      function openSignUp(){
-        document.getElementById('signup-form').style.display='block'
+      function openSignUp(planType){
+        document.getElementById('signup-form').style.display='block';
+
+        //Pre populate select field depending the selected plan
+        document.getElementById('plan').value = planType;
       }
 
 
