@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>WEBSIMPLY</title>
   </head>
   <body>
@@ -21,7 +22,7 @@
       <!-- (B) MENU ITEMS -->
 
       <div id="hamItems">
-        <a href="home.html" id="logoLink"><img id="logo" height="40px" src="images/logo.png" alt="Logo"></a>
+        <a href="home.html" id="logoLink"><img id="logo" height="40" src="images/logo.png" alt="Logo"></a>
         
         <a href="home.html" >Home</a>
         <a href="services.html" >Services</a>
@@ -218,7 +219,7 @@
       <button class="open-chat" onclick="openChat()"><i id="chat-icon" class="fa fa-comments fa-2x" style="color: #3f704d;" aria-hidden="true"></i></button>
       <!--Popup Chat form-->
       <div class="chat-popup" id="chatForm">
-        <form action="" method="post" class="chat-container">
+        <form method="post" class="chat-container">
           <h3>Chat with us</h3>
           <label for="msg"><b>Message</b></label>
           <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Type message..." required></textarea>
@@ -234,19 +235,19 @@
       <!--Close button-->
       <span onclick="document.getElementById('signup-form').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-      <form action="" method="post" class="modal-content">
+      <form method="post" class="modal-content">
         <div class="modal-container">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account</p>
           <hr>
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
 
           <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          <input type="password" placeholder="Repeat Password" id="psw-repeat" name="psw-repeat" required>
 
           <label for="plan"><b>Plan</b></label>
           <select name="plan" id="plan">
@@ -297,6 +298,13 @@
         </p>
 
         <p>Websimply &copy; 2021</p>
+        <p>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                  src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                  alt="¡CSS Válido!" />
+              </a>
+          </p>
       </div>
 
     </footer>

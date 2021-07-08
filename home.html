@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>WEBSIMPLY</title>
 
     <style>
-      .banner {
+ 
+
+     .banner {
           /* The image used */
           background-image:
-          url(file:///Users/user/Desktop/Websimply/Websimply_project/images/banner.png);            
-;
+         url(https://www.innerlightyoga.ie/wp-content/uploads/2021/06/banner.png);
           /* Create the parallax scrolling effect */
           background-attachment: fixed;
           /* Prevent image from repeating */
           background-repeat: no-repeat;
+          background-size: cover;
+         margin: auto;
           margin-top: 20px;
           padding: 50px;
           height: 400px;
@@ -26,33 +30,142 @@
 
 .bannermobile {
           background-image:
-     url(file:///Users/user/Desktop/Websimply/Websimply_project/images/mobilebanner.png);            
+     url(https://www.innerlightyoga.ie/wp-content/uploads/2021/06/mobilebanner.png);            
      margin-top: 20px;  
      margin-left: auto;
 margin-right: auto;  
 margin-bottom: auto; 
-     height: 200px;
-          padding: 50px;
-          color: white;
-          background-attachment: fixed;
-          text-align: center;
+background-size: cover;
+height: 200px;
+padding: 50px;
+color: white;
+background-attachment: fixed;
+text-align: center;
 
       }
+
+
+
       .mainsection{
 padding-left:10%;
 padding-right:10%;
       }
-              @media (max-width: 768px){
-.banner { display: none;}
-      }
-      @media (min-width: 768px){
-.bannermobile { display: none;}
+
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.header2{
-  text-align: center;
-  color: #9dc183;
+.columns {
+  flex-basis: 25%;
+  padding-top: 50px;
+  margin: 10px;
+ }
+
+.icons i{
+  color: white;
+  background-color: #3f704d;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px 0px #9dc183;
+  font-size: 40px;
+  width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
 }
+
+
+.icons i:hover{
+  background-color: #9dc183;
+  box-shadow: 0 2px 4px 0 #3f704d;
+  transition: 500ms linear;
+
+
+}
+
+
+              @media (max-width: 823px){
+.banner { display: none;}
+.icons {
+  flex-direction: column;
+}
+.columns {
+  flex-direction: column;
+
+}
+.box{
+  flex-direction:column;
+  text-align: center;
+}
+.rowimages{
+  flex-direction: column;
+}
+
+              }
+      @media (min-width: 823px){
+.bannermobile { display: none;}
+
+}
+
+.icontext{
+  padding: 10px;
+}
+.icontext:hover {
+background-color:#3f704d;
+color: white;
+transition: ease-in 0.25s;
+
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgwrap {
+   width: 80%; 
+   margin: auto;
+   padding-right: 20px;
+   padding-bottom: 0px;
+}
+.imgwrap img {
+   display: block;
+   width: 100%;
+   max-width: 600px; /*actual image width*/
+   height: auto; /* maintain aspect ratio*/
+   margin: auto; /*optional centering of image*/
+
+}
+
+
+   
+   .testimonial{
+
+    background-color:#9dc183; color:white; 
+    margin-left: -10%; 
+    margin-right: -10%; 
+    padding: 15px; 
+    box-shadow: #3f704d 0px 2px 4px 0px;
+
+    
+   }
+.rowimages{
+  display:flex;
+  flex-direction: row;
+float:left;
+  margin: 10px;
+  padding: 20px;
+width: 100%;
+text-align: center;
+}
+.columnimage{
+  flex-basis: 20%;
+  }
 </style>
   </head>
   <body>
@@ -66,7 +179,7 @@ padding-right:10%;
       <!-- (B) MENU ITEMS -->
 
       <div id="hamItems">
-        <a href="home.html" id="logoLink"><img id="logo" height="40px" src="images/logo.png" alt="Logo"></a>
+        <a href="home.html" id="logoLink"><img id="logo" height="40" src="images/logo.png" alt="Logo"></a>
         
         <a href="home.html" >Home</a>
         <a href="services.html" >Services</a>
@@ -77,33 +190,127 @@ padding-right:10%;
     </nav>
 
     <!-- Your design starts here-->
-    <section class="mainsection">
+   
+
       <div class="banner">
         <div>
-          <h1>Welcome to Websimply</h1>
-          <h5>Affordable bespoke web design services in Ireland</h5>
-          <button>Discover how we can help you do better online</button>
+          <h2 style="font-size:36px; color: white; padding-top:70px;">Affordable bespoke web design services in Ireland</h2>
+          <button onclick="location.href='services.html';" >Discover how we can help you do better online</button>
         </div>  </div>
     <div class="bannermobile">
-        <h1>Welcome to Websimply</h1>
-        <h5>Affordable bespoke web design services in Ireland</h5>
-        <button>Discover how we can help you do better online</button>
+        <h1 style="color:white">Affordable bespoke web design services in Ireland</h1>
+          <button style="height: 50px; width: 250px; font-size:12px" onclick="location.href='services.html';">Discover how we can help you do better online</button>
     </div>
+    <section class="mainsection">
+<div>
+  <div>
+  <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 58px;
+  text-align: center;">
+  Welcome to Websimply
+</h1>
+<h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 28px;
+text-align: center; margin-top: -30px;">
+  Exemplary Website Designs for Startups, Entrepreneurs & Enterprises
+
+</h2>
+</div>
+
+<div style= "text-align: center; display: flex; flex-direction: row; box-shadow: 0px 2px 3px 4px #9dc183;">
+    <p style="padding:25px;"> Websimply scializes in website design and development services. Our web experiences are high-performing, feature-packed and digitally transformative, designed to be user-friendly, fully functional, very secure and able to scale as your enterprise grows. <br><br>
+      Remember, a website is an integral entity of your business. It should reflect your brand aesthetic and encourage your target audience to rely on your business. Our custom web design services are the outcomes of a collaborative process. We work closely with aspiring clients like you to ensure that the site truly represents your brand. Engage our innovative and future-ready web development services to offer the visitors an immersive digital experience.</p>
+</div>
 
 
+<div class="icons">
 
 
+  <div class="columns">
+    <i class="fa fa-star-o"></i>
+    <h2>Customized Designs</h2>
+    <p class="icontext">We value a personalized approach to our web design services, which is why we tailor every website service package to your company’s unique needs. </p>
+  </div>
+
+  <div class="columns">
+    <i class="fa fa-line-chart"></i>
+    <h2>Experience Led</h2>
+    <p class="icontext">We help brands understand the role digital can play in realizing strategic opportunities and solving real world business problems, always keeping the focus on the customer's experience and the results generated.</p>
+  </div>
+  <div class="columns">
+    <i class="fa fa-thumbs-up"></i>
+    <h2>Customer Satisfaction</h2>
+    <p class="icontext">Our client’s opinion is a priority to us. We will first ask for your opinion on the project. We will customize features in accordance with your preferences.</p>
+  </div>
+
+  <div class="columns">
+    <i class="fa fa-user-o"></i>
+    <h2>Support</h2>
+    <p class="icontext">We’re on hand to make sure your online operations always run smoothly. We partner with businesses to make sure their website is always fast, reliable, secure and up to date.
+
+    </p>
+
+  </div>
+  </div>
+  <div>
+    <h2 style="background-color: #9dc183; color:white; padding: 5px 0px 5px 0px; text-align: center; box-shadow: 0px 2px 4px 0px #3f704d;">About Websimply</h2>
+  </div>
+  <div class="box">
 
 
+    <div class="imgwrap">
+      <img src="images/About.jpg" style="float:left" alt="About image">
+    
+  </div>
+  <p>We established our company in 2010 and have grown to become a leading Irish Web Design and Development business with thousands of clients.<br>
+    We provide a full range of Web Services including high quality Custom Website Design, Website Development and Search Marketing services. Our clients range from small start-up businesses, to sizeable, brand recognisable organisations. Whatever your business, we will help it to perform better just like we’ve done for our clients.<br>
+    
+    We set our prices at extremely competitive levels and offer unlimited design revisions with all websites we create, thus providing our clients with 100% satisfaction guaranteed. We truly believe that we have got the quality/price balance spot on. We are the right choice if you’re looking for an affordable website that will turn visitors in to customers.</p>
+</div>
+<div style="text-align: center; padding-bottom: 40px;">
+  <button style="height: 35px;font-size:18px;" onclick="location.href='about.html';">Find out more</button></div>
+</div>
+  
 
+<div class="testimonial">
+  <figure>
+    <blockquote>
+    "Working with Websimply has been fantastic. We always want to ensure we get plenty of value from any vendor that we work with, and in that regard Appnovation really excels. With our latest project, we received top-quality work, enjoyed working with a really responsive team, and when we threw curve balls or suggested unique functionality, they quickly went to work to make it a reality." </blockquote>
+    <figcaption>
+        David O'Sullivan
+    </figcaption>
+</figure></div>
 
+<div class="rowimages">
 
+  <div class="columnimage">
+    <img src="images/Visa.png" alt="visa logo">
+  </div>
+  <div class="columnimage">
+    <img src="images/Tigers.png" alt="tigers logo">
+    
+  </div>
+  <div class="columnimage">
+    <img src="images/NaturalFood.png" alt="natural foods logo">
+  </div>
+  <div class="columnimage">
+    <img src="images/Canva.png" alt="canva logo">
+  </div>
+  <div class="columnimage">
+    <img src="images/Roblox.png" alt="roblox logo">
+  </div>
+</div>
+<div>
+  <p style="color: #9dc183; text-align:center; font-weight:  500;">OUR CUSTOMERS</p>
+  <p style="color: #9dc183; text-align: center;">Working with over 800 fantastic customers for web design in Dublin and every county in Ireland, each with their own unique digital marketing needs.</p>
 
+</div>
+<div>
+  <img src="images/Design.jpg" alt="Desing image" style="display:block; max-width: 100%; margin-left:auto; margin-right: auto;">
+  <button style="position: relative; margin-top:-50px; margin-left:auto; margin-right: auto;" onclick="location.href='contact.html';">Get in touch and get started today. We're ready!</button>
+</div>
 
-
-      
-
-    </section>
+</section>
 
 
 
@@ -130,6 +337,14 @@ padding-right:10%;
         </p>
 
         <p>Websimply &copy; 2021</p>
+        <p>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                  src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                  alt="¡CSS Válido!" />
+              </a>
+          </p>
+
       </div>
 
     </footer>

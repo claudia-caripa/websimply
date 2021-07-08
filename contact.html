@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>WEBSIMPLY</title>
     <style>
       body {
@@ -22,6 +23,7 @@
       #div1 {
         /*width: 50px;*/
         height: 90px;
+        border-bottom: 1px #9DC183 solid;
       }
 
       /*Style for the logo*/
@@ -29,16 +31,24 @@
         height: 20%;
         margin: 5px;
       }
-
+      
       #maps{
-        width: 250px;
-        
+        width: 250px;  
       }
 
        /*Style for social media icons*/
       #div1 i{
         color: #9dc183;
         padding: 10px;
+      }
+
+      .map{
+        border: 1px #9DC183 solid;
+        background-color: white;
+      }
+
+      .map h2{
+        margin: 3px;
       }
       
       /* Style inputs */
@@ -62,16 +72,7 @@
       input[type=submit]:hover {
         background-color: #9dc183;
       }
-      
-      /*input[type=email]{
-          background-color: white;
-          width: 50%;
-          border: none;
-          padding: 1px;
-         padding: 5em
-      }*/
-      
-      
+            
       /* Style the container/contact section */
       .container {
         border-radius: 5px;
@@ -92,6 +93,11 @@
         content: "";
         display: table;
         clear: both;
+      }
+
+      iframe{
+        width: 100%;
+        border: none;
       }
       
       /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -114,7 +120,7 @@
       <!-- (B) MENU ITEMS -->
 
       <div id="hamItems">
-        <a href="home.html" id="logoLink"><img id="logo" height="40px" src="images/logo.png" alt="Logo"></a>
+        <a href="home.html" id="logoLink"><img id="logo" height="40" src="images/logo.png" alt="Logo"></a>
         
         <a href="home.html" >Home</a>
         <a href="services.html" >Services</a>
@@ -139,21 +145,23 @@
               
                 <img src="images/logo.png" alt="Logo">
                 <br>
-                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
-                <a href="#"><i class="fa fa-github fa-2x"></i></a>
+                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+                <a href="#"><i class="fa fa-github fa-lg"></i></a>
 
               </div>
               <div>
                 <h2>Call us</h2>
-                <p style: background-color: #3f704d;>+0863351579</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i>+0863351579</p>
                 <br>
-                
-                <h2>Find us</h2>
-                <div style="width: 100%">
-                  <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Aviva%20stadium+(WEBSIMPLY)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                <div class="map">
+                  <h2>Find us</h2>
+                  <div style="width: 100%">
+                    <iframe height="300" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Aviva%20stadium+(WEBSIMPLY)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                </div>
               </div>
+
             </aside>
           </div>
          
@@ -164,7 +172,7 @@
               <label for="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email.." required></input>
+              <input type="email" id="email" name="email" placeholder="Enter your email.." required>
              <br>
              <br>
               <label for="subject">Subject</label>
@@ -202,6 +210,13 @@
         </p>
 
         <p>Websimply &copy; 2021</p>
+        <p>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                  src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                  alt="¡CSS Válido!" />
+              </a>
+          </p>
       </div>
 
     </footer>
