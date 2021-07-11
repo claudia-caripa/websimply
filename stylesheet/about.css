@@ -31,10 +31,12 @@ img {vertical-align: middle;}
 }
 
 #teamwork{
-  margin: 40px 40px 40px 10px;
+  margin: 20px 40px 40px 10px;
   width: 40%;
   float: right;
   box-shadow: 0 2px 4px 0 #9DC183;
+  opacity:0.95;
+  border-radius: 50%;
 }
 
 .reviewsection{
@@ -145,6 +147,7 @@ i{
   margin-top: 50px;
   border: 1px solid #3f704d;
   text-align: center;
+  box-shadow: 0 2px 4px 0 #9DC183;
 }
 
 .reviewForm{
